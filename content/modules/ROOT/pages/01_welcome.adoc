@@ -21,7 +21,8 @@ This will take around 1-1:20 hrs.
 
 Navigate to https://demo.redhat.com/catalog?search=Red+Hat+OpenShift+Container+Platform+Cluster&item=babylon-catalog-prod%2Fopenshift-cnv.ocpmulti-wksp-cnv.prod and order 2 _**Red Hat OpenShift Container Platform Cluster**_. One for the _**Dev**_ environment and one for the _**Prod**_ environment. Create using the defaults:
 
-image::images/clustersettings_Dev_Prod.png[width=50%]
+[.bordershadow]
+image::clustersettings_Dev_Prod.png[width=50%]
 
 **We'll be using and setting up the DEV and PROD clusters for the later sections.**
 
@@ -37,7 +38,8 @@ Follow the following steps to complete the install and setup:
 
 . In the top right drop down, select the _**Copy Login Command**_. Enter credentials again. Copy the login token as shown in the image. Paste and run the command in your local terminal. This should log you into the cluster through the terminal.
 
-image::images/Login_command.png[Copy the login token]
+[.bordershadow]
+image::Login_command.png[Copy the login token]
 
 NOTE: If the `oc login` command fails because of certificate issue, use: `--insecure-skip-tls-verify`
 
@@ -66,18 +68,21 @@ cd ai-accelerator/
 * This will first install the GitOps Operator and then provide the user with the following overlays:
 * If the script times out waiting for GitOps to come up, you may need to run the bootstrap script again.
 
-image::images/Bootstrap_selection_1.png[]
+[.bordershadow]
+image::Bootstrap_selection_1.png[]
 
 [start=6]
 . For _**Demo**_ cluster type the number 3 and press Enter. 
 
 This will install all the applications in the bootstrap script and also provide a openshift-gitops-server (ArgoCD) link.
 
-image::images/Bootstrap_argo_url.png[]
+[.bordershadow]
+image::Bootstrap_argo_url.png[]
 [start=7]
 . Log into the Argo CD link with the Openshift credentials and wait till everything syncs successfully.
 
-image::images/Argo_home_screen.png[]
+[.bordershadow]
+image::Argo_home_screen.png[]
 
 
 This will take around 25-30 minutes for everything to spin up.

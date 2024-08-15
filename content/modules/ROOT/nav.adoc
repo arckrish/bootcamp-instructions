@@ -1,13 +1,33 @@
 * 1. Welcome
-** xref:01_welcome.adoc[Welcome]
+** xref:01_welcome.adoc[]
 
-* 2. Connection and Setup
+* 2. Sample answers for Customer Conversation
 
+* 3. Three-Point Estimate Instructions
 
-* 3. Working with an LLM
+* 4. AI-accelerator Project
 
+* 5. Setup Dev & Prod Environments
 
-* 4. Image Processing
+* 6. Custom Notebook
 
+* 7. Model Training
 
+* 8. Boto3
+
+* 9. Deploy Model
+
+* 10. Setup Pipeline Server
+
+* 11. Introduction to KFP Pipelines
+
+* 12. Working with Pipelines
+
+* 13. Distributed Training
+
+* 14. Explore LLMs
+
+* 15. RAG with LLM
+
+* 16. Argo CD URL fix
 
