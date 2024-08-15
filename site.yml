@@ -19,7 +19,3 @@ output:
 
 runtime:
   cache_dir: ./content/.cache/antora
-
-
-runtime:
-  cache_dir: ./.cache/antora
