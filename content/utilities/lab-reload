@@ -49,7 +49,7 @@ time \
 ${container_runtime} run --rm --name showroom-builder \
     --platform linux/amd64 \
     -v "${PWD}:/antora" \
-    docker.io/antora/antora default-site.yml
+    docker.io/antora/antora site.yml
 printf "%b  %b %s\\n" "${OVER}" "${TICK}" "Site Rebuilt "
 
 # printf "  %b Caching site %s\\n" "${INFO}"

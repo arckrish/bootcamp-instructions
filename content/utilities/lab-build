@@ -22,7 +22,7 @@ mkdir -p ./content/www
 ${container_runtime} run --rm --name showroom-builder \
     --platform linux/amd64 \
     -v "${PWD}:/antora" \
-    docker.io/antora/antora default-site.yml
+    docker.io/antora/antora site.yml
 
 echo "Build process complete. Check the ./content/www folder for the generated site."
 echo "To view the site locally, run the following command: utilities/lab-serve"
