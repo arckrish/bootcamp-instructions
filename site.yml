@@ -3,9 +3,8 @@ runtime:
 
 site:
   title: AI Accelerate Botocamp
-  repo: bootcamp-instructions
-  url: https://github.com/arckrish/bootcamp-instructions
-  start_page: bootcamp-instructions::welcome.adoc
+  url: https://arckrish.github.io//bootcamp-instructions
+  start_page: modules::welcome.adoc
 
 content:
   sources:
