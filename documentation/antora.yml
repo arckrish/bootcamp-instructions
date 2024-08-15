@@ -1,5 +1,5 @@
-name: rhs-build-course
-title: Writing a RedHat scholar Course
+name: bootcamp-instructions
+title: Bootcamp Instructions
 version: master
 asciidoc:
   attributes:
@@ -8,4 +8,4 @@ asciidoc:
 nav:
   - modules/ROOT/nav.adoc
 
-start_page: ROOT:index.adoc
+start_page: ROOT:welcome.adoc
