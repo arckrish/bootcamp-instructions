@@ -1,7 +1,7 @@
 site:
   title: AI Accelerate Bootcamp
   url: https://arckrish.github.io/bootcamp-instructions
-  start_page: modules::welcome.adoc
+  start_page: modules::01_welcome.adoc
 
 ui:
   bundle:

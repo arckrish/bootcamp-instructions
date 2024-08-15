@@ -8,4 +8,4 @@ asciidoc:
 nav:
   - modules/ROOT/nav.adoc
 
-start_page: ROOT:welcome.adoc
+start_page: ROOT:01_welcome.adoc
