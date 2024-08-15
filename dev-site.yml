@@ -3,7 +3,7 @@ runtime:
 
 site:
   url: http://localhost:3000
-  start_page: rhs-build-course::index.adoc
+  start_page: bootcamp-instructions::welcome.adoc
 
 content:
   sources:
