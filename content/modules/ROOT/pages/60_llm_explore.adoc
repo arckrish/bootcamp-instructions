@@ -15,7 +15,8 @@ The Inference Service uses a vllm ServingRuntime which can be found https://gith
 ### Nodes and Taints
 Notice in the InferenceService of the vllm example there are GPU sections:
 
-image::images/vllm_gpu.png[]
+[.bordershadow]
+image::vllm_gpu.png[]
 
 As you can see in the resources section, this Inference Service is needing a gpu to function properly.
 
@@ -27,27 +28,32 @@ Let's take a look at the node:
 
 In `OpenShift Dashboard > Compute > Nodes` we can see we have 3 nodes. Let's look at the one with the gpu.
 
-image::images/nodes.png[]
+[.bordershadow]
+image::nodes.png[]
 
 Select the GPU node. The instance is g5.2xlarge which has a gpu. You can see the different type of instances here: https://aws.amazon.com/ec2/instance-types/[]
 
 If we look at the node details and scroll down we can see the taint that is has.
 
-image::images/node_taint_edit.png[]
+[.bordershadow]
+image::node_taint_edit.png[]
 
 We can also see it in the yaml.
 
-image::images/node_taint.png[]
+[.bordershadow]
+image::node_taint.png[]
 
 In the node yaml we can view the labels associated with the node. Lets look at the the `nvidia.com/*` labels. As you can see we have: `nvidia.com/gpu.count: '1'` which tells us that we have a gpu attached to this node
 
-image::images/node_gpu_count.png[]
+[.bordershadow]
+image::node_gpu_count.png[]
 
 We can also run a `oc describe`` on the node:
 
 `oc describe node ip-**-*-**-***.us-east-2.compute.internal | grep gpu` 
 
-image::images/node_describe_gpu.png[]
+[.bordershadow]
+image::node_describe_gpu.png[]
 
 ### Test Model Notebooks
 After exploring the GPU Node details, open RHOAI and launch new workbench and run the tests for the LLMs. These can be found in the `https://github.com/redhat-ai-services/ai-accelerator[]` 

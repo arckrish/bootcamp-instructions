@@ -211,7 +211,8 @@ To test if the served model is working as expected, go back to RHOAI `parasol-in
 
 Make sure to change the values in the notebook when testing:
 
-image::images/model_serving_notebook_changes.png[]
+[.bordershadow]
+image::model_serving_notebook_changes.png[]
 
 After making these changes, run the notebook and we should see an output to the image that we pass to the model.
 

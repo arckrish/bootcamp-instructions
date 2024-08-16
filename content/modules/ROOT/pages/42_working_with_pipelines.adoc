@@ -495,15 +495,18 @@ A pipeline experiment is a workspace where you can try different configurations 
 
 . Navigate to RHOAI Dasboard, click on *Experiments* > *Experiments and Runs*. Validate that new experiment `accident_detection` is created
 
-image::images/41_working_with_pipelines/experiments_runs.png[]
+[.bordershadow]
+image::experiments_runs.png[]
 
 . Click on the experiment `accident_detection` to view pipeline runs. 
 
-image::images/41_working_with_pipelines/pipeline_runs.png[]
+[.bordershadow]
+image::pipeline_runs.png[]
 
 . Click on each pipeline run to view more details. 
 
-image::images/41_working_with_pipelines/pipeline_run_details.png[]
+[.bordershadow]
+image::pipeline_run_details.png[]
 
 . We can schedule periodic pipeline runs for an experiment. Click on 'Schedules'. Click on 'Create Schedule'. Please fill following details: 
 * *Experiment:* We can choose an existing Experiment or create a new Experiment. 
@@ -515,18 +518,22 @@ image::images/41_working_with_pipelines/pipeline_run_details.png[]
 * *Pipeline:* Name of the pipeline 
 * *Pipeline version:* Version of the pipeline
 
-image::images/41_working_with_pipelines/schedule-1.png[]
+[.bordershadow]
+image::schedule-1.png[]
 
-image::images/41_working_with_pipelines/schedule-2.png[]
+[.bordershadow]
+image::schedule-2.png[]
 
 ## Executions
 
 On Executions page, you can view the execution details of each pipeline task execution, such as its name, status, unique ID, and execution type.
 
-image::images/41_working_with_pipelines/executions.png[]
+[.bordershadow]
+image::executions.png[]
 
 ## Artifacts
 
 On Artifacts page, you can view the pipeline artifacts. It helps you to evaluate the performance of your pipeline runs.
 
-image::images/41_working_with_pipelines/artifacts.png[]
+[.bordershadow]
+image::artifacts.png[]

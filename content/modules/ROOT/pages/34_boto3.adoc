@@ -304,7 +304,8 @@ Validate against  https://github.com/redhat-ai-services/ai-accelerator-qa/pull/n
 . Navigate to RHOAI dashboard, and you should see an `Standard Workbench` available in the `Workbenches` tab.
 
 +
-image::images/standard-workbench.png[Standard workbench]
+[.bordershadow]
+image::standard-workbench.png[Standard workbench]
 
 ## Explore S3 in RHOAI Workbench:
 Some S3 technologies do not come with UI or CLI to interact with the buckets or files. A common tool that can be used accross all S3 technologies is boto3. Boto3 is the AWS SDK for Python. It allows you to directly interact with AWS services such as S3, EC2, and more.
@@ -312,14 +313,16 @@ Some S3 technologies do not come with UI or CLI to interact with the buckets or 
 . Go to RHOAI Dashboard and go to the _**parasol-insurance**_ Data Science Project.
 
 +
-image::images/standard-workbench.png[Standard workbench]
+[.bordershadow]
+image::standard-workbench.png[Standard workbench]
 
 . As you can see there is a workbench running named _standard-workbench_. 
 
 . Use the kebab menu and select `Edit workbench`. View the _Environment Variables_ and notice how the minio values are loaded as environment variables. Also notice in the _Data Connection_ section that it is selected to the minio data connection.
 
 +
-image::images/Workbench_env_vars.png[]
+[.bordershadow]
+image::Workbench_env_vars.png[]
 
 . Launch the workbench and wait for the Jupyter notebook to spin up.
 

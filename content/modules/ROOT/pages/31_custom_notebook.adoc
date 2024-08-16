@@ -71,7 +71,8 @@ podman login quay.io
 ====
 Log into https://quay.io[quay.io] and go to _**Account Settings**_ in the top right. In the Account settings, _**Generate Encrypted Password**_ in order for you to login using the command line. Use this when logging into quay.io from podman
 
-image::images/quay_cli_password.png[]
+[.bordershadow]
+image::quay_cli_password.png[]
 
 ====
 
@@ -296,7 +297,8 @@ resources:
 . Navigate to the `parasol-insurance` data science project in RHOAI, and notice the `custom-workbench` notebook available in the *Workbenches* tab:
 
 +
-image::images/31_custom_notebook/01_custom_workbench.png[Custom workbench]
+[.bordershadow]
+image::01_custom_workbench.png[Custom workbench]
 
 [TIP]
 ====

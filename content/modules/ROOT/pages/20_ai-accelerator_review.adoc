@@ -1,4 +1,4 @@
-# ai-accelerator Project
+# AI-Accelerator Project
 
 The AI-accelerator project is an automated way to deploy RHOAI, relevent operators, and examples to a cluster.
 
@@ -21,12 +21,13 @@ This project is set up with ArgoCD and Kustomize in mind. Meaning ArgoCD will ha
 
 If you are unfamiliar with Kustomize, this is a very good tutorial: https://devopscube.com/kustomize-tutorial/[Learn more about Kustomize].
 
-### Overview of Kustomize in ai-accelerator project
+### Overview of Kustomize in AI-Accelerator Project
 Let's try to understand how Kustomize is being used to deploy the different resources in the ai-accelerator.
 
 1. When running the _**bootstrap.sh**_ script, it will apply the Open Shift GitOps operator by using Kustomize on the https://github.com/redhat-ai-services/ai-accelerator/blob/b90f025691e14d8e8a8d5ff3452107f8a0c8f48d/scripts/bootstrap.sh#L11[GitOps_Overlay] https://github.com/redhat-ai-services/ai-accelerator/tree/b90f025691e14d8e8a8d5ff3452107f8a0c8f48d/components/operators/openshift-gitops/operator/overlays/latest[folder]:
 
-image::images/GitOps_overlay.png[]
+[.bordershadow]
+image::GitOps_overlay.png[]
 
 In `scripts/bootstrap.sh` the GitOps resources are installed from the _GITOPS_OVERLAY_ variable and are applied to the cluster:
 
@@ -37,7 +38,8 @@ Looking at the picture below:
 
 Remember: Kustomize looks for the `kustomization.yaml` file in the folder
 
-image::images/Bootstrap_overlays2.png[]
+[.bordershadow]
+image::Bootstrap_overlays2.png[]
 
 1. Starting at `bootstrap/overlays/rhoai-fast` (this is the one we chose in the menu when running the _bootstrap.sh_ script). `bootstrap/overlays/rhoai-fast/kustomization.yaml` references two folders: `bootstrap/base` and `clusters/overlays/rhoai-fast`.
 
@@ -59,7 +61,8 @@ image::images/Bootstrap_overlays2.png[]
 
 As you can see, there are a lot of references to different folders. Let's keep digging on what is in the components folder.
 
-image::images/Bootstrap_overlays3.3.png[]
+[.bordershadow]
+image::Bootstrap_overlays3.3.png[]
 
 [start=11]
 11. From the first picture, looking at number 10: Kustomize will look at the `components/argocd/apps/overlays/rhoai-fast` folder for the `components/argocd/apps/overlays/rhoai-fast/kustomization.yaml` file.
@@ -80,31 +83,36 @@ ArgoCD AppProject resources allows the grouping of projects logically and for sc
 
 Let's look at the ApplicationSet:
 
-image::images/ApplicationSet_tenants.png[]
+[.bordershadow]
+image::ApplicationSet_tenants.png[]
 
 As you can see from the file, there are incomplete values, such as line 15, 37, and 38. Kustomize can replace these values with the _**patch**_ feature. 
 Let's take a look at the `components/argocd/apps/overlays/rhoai-fast/kustomization.yaml` file to learn how the patching works.
 
 ### Kustomize Patches
 
-image::images/Kustomization_patch.png[]
+[.bordershadow]
+image::Kustomization_patch.png[]
 
 As you can see in the above kustomization file there is a _**patch**_ section. Each entry of the patches has a _**path**_ associated with it, this is a reference to the patch file. The _**target**_ is for which resources in the _**base**_ folder the patch should be applied.
 
 The last patch in the `components/argocd/apps/overlays/rhoai-fast/kustomization.yaml` references the `ApplicationSet` with the name `tenants` (this is the ApplicationSet that we were looking at earlier).
 Taking at look at the patch file: `patch-tenants-applicationset.yaml`
 
-image::images/Kustomization_patch2.png[]
+[.bordershadow]
+image::Kustomization_patch2.png[]
 
 In the patch file, there is the `op` or _**operator**_ that kustomize will do. In this case, it will replace the value. Kustomize can also add and delete values and have multiple operations in one patch file.
 
 In the patch file, there is the path of where it is going to replace in the yaml.
 
-image::images/Kustomization_patch3.png[]
+[.bordershadow]
+image::Kustomization_patch3.png[]
 
 Line 15 will be replaced with:
 
-image::images/Kustomization_patch4.png[]
+[.bordershadow]
+image::Kustomization_patch4.png[]
 
 When ArgoCD reads the repository and the kustomization files, it reads the patches and applies the patches when deploying the resources.
 

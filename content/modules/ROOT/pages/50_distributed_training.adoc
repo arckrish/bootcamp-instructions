@@ -99,7 +99,8 @@ resources:
 . Push your changes to the Git repository, and wait for the application to sync in ArgoCD.
 
 +
-image::images/50_distributed_training/01-kueue-sync.png[Kueue sync]
+[.bordershadow]
+image::01-kueue-sync.png[Kueue sync]
 
 ## Running distributed workloads
 
@@ -137,7 +138,8 @@ Replace the `token` and `server` values with the correct values for your OpenShi
 
 You can find these values in the OpenShift Web Console by clicking on your username in the top right corner and selecting `Copy Login Command`.
 
-image::images/50_distributed_training/02-server-token.png[server token]
+[.bordershadow]
+image::02-server-token.png[server token]
 ====
 
 . Add a cell to configure a Ray cluster:
@@ -178,12 +180,14 @@ cluster.status()
 ----
 
 +
-image::images/50_distributed_training/03-cluster-up-and-status.png[Cluster up and status]
+[.bordershadow]
+image::03-cluster-up-and-status.png[Cluster up and status]
 
 . repeat running the `cluster.status()` cell until the status is `Active`.
 
 +
-image::images/50_distributed_training/04-cluster-ready.png[Cluster ready]
+[.bordershadow]
+image::04-cluster-ready.png[Cluster ready]
 
 +
 [NOTE]
@@ -225,7 +229,8 @@ With mTLS mechanism, the Ray Cluster pods create certificates that are used for 
 . Navigate to the Ray cluster dashboard using the link provided by the `cluster.status()` cell.
 
 +
-image::images/50_distributed_training/05-ray-dashboard.png[Cluster dashboard]
+[.bordershadow]
+image::05-ray-dashboard.png[Cluster dashboard]
 
 +
 [TIP]
@@ -400,7 +405,8 @@ Replace the `token` and `server` values with the correct values for your OpenShi
 
 You can find these values in the OpenShift Web Console by clicking on your username in the top right corner and selecting `Copy Login Command`.
 
-image::images/50_distributed_training/02-server-token.png[server token]
+[.bordershadow]
+image::02-server-token.png[server token]
 ====
 
 . Add a cell to configure a Ray cluster:
@@ -446,15 +452,18 @@ Wait to continue until the cell finishes running (the asterisk `*` will change t
 ====
 In the OpenShift web console, you can monitor the Ray cluster pods in the `parasol-insurance` namespace, search for the pods with the `jobtest` name.
 
-image::images/50_distributed_training/06-jobtest-pods.png[Ray cluster pods]
+[.bordershadow]
+image::06-jobtest-pods.png[Ray cluster pods]
 
 You can also search for the `workload` resource in the `parasol-insurance`:
 
-image::images/50_distributed_training/07-jobtest-workload.png[Ray cluster workload]
+[.bordershadow]
+image::07-jobtest-workload.png[Ray cluster workload]
 
 In the workload details, you can see the *Conditions* section, where you can check the cluster provisioning status:
 
-image::images/50_distributed_training/08-jobtest-workload-conditions.png[Ray cluster workload conditions]
+[.bordershadow]
+image::08-jobtest-workload-conditions.png[Ray cluster workload conditions]
 
 ====
 
@@ -536,7 +545,8 @@ print("Job Succeeded")
 . Open the Ray cluster dashboard and monitor the job status.
 
 +
-image::images/50_distributed_training/09-ray-dashboard-job.png[Ray dashboard job]
+[.bordershadow]
+image::09-ray-dashboard-job.png[Ray dashboard job]
 
 . Wait for the job to finish.
 

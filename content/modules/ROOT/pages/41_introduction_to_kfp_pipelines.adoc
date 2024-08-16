@@ -9,12 +9,14 @@ To setup the environment for this, please follow the following steps:
 . In RHOAI and in the `parasol-insurance` project, create a workbench named `Pipeline workbench` and use the `code-server` image. Keep the other default options and click on Create
 
 +
-image::images/Code_workbench.png[]
+[.bordershadow]
+image::Code_workbench.png[]
 
 . When the workbench starts running, open it and clone the following repository: `https://github.com/redhat-ai-services/kubeflow-pipelines-examples.git`. You can keep the default path as /opt/app-root/src. Now open the folder that is cloned. Your window should look as follows:
 
 +
-image::images/Code_workbench_window.png[]
+[.bordershadow]
+image::Code_workbench_window.png[]
 
 . Rename the `example.env` file to `.env`
 
@@ -53,7 +55,8 @@ BEARER_TOKEN="sha256~0QQ0VTC87TQf6GsOKxm6ay4-_sw8O4x7ZWvzzZVo34I~" # oc whoami -
 .. To run this pipeline click on the Create Run option as follows:
 
 +
-image::images/Compiled_pipeline.png[]
+[.bordershadow]
+image::Compiled_pipeline.png[]
 
 .. To check the run, go to the Runs section under the Data Science Pipelines section
 
@@ -70,7 +73,8 @@ image::images/Compiled_pipeline.png[]
 +
 This will create a pipeline and also submit a run. To view this run go to `RHOAI Dashboard` -> `Experiments` -> `Experiments and runs`.
 +
-image::images/41_working_with_pipelines/pipeline_runs.png[]
+[.bordershadow]
+image::pipeline_runs.png[]
 
 [start=4]
 . The next file, `03_outputs_pipeline.py`, introduces the output capability. Run it in the notebook terminal with the below command and check the output in the Runs section in RHOAI:

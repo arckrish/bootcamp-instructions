@@ -12,11 +12,13 @@ Open the three-point base template here: https://red.ht/ThreePointEstimate
 ** 🧰 Red Hat Tools -> Import Existing Services Solution
 ** Give permission to the script to run as your RH Google account (click the menu item again if it doesn't work the first time)
 +
-image::images/Three-Point_Import_Template.png[]
+[.bordershadow]
+image::Three-Point_Import_Template.png[]
 +
 ** Click the 'Browse' button and navigate to _Portfolio Hub -> Current -> AI/ML [v4.0 - Current]_
 +
-image::images/Three-Point_AI-Accel-Soln.png[]
+[.bordershadow]
+image::Three-Point_AI-Accel-Soln.png[]
 +
 ** Select *AI Accelerator [v4.0] [Scope]* and click Select
 ** Click 'Import' and wait for the import to complete

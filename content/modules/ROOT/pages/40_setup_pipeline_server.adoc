@@ -88,7 +88,8 @@ Your Data Science Cluster requires a dspa, so that you can create pipelines.
 
 Before creating the dspa object, your Data Science Project shows a button to *Configure pipeline server*:
 
-image::images/41_working_with_pipelines/01-configure-pipeline-server.png[Configure pipeline server]
+[.bordershadow]
+image::01-configure-pipeline-server.png[Configure pipeline server]
 
 Instead of creating the pipeline server configuration using the RHOAI method that you have seen in previous enablemens, in these steps you are using the GitOps method to create the pipeline server configuration.
 ====
