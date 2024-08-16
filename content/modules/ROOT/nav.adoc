@@ -1,7 +1,6 @@
-* 1. Welcome
-** xref:01_welcome.adoc[Environment Set Up]
+* xref:01_welcome.adoc[Environment Set Up]
 
-* 2. Sample answers for Customer Conversation
+* xref:10_customer_conversation.adoc[Sample answers for Customer Conversation]
 
 * 3. Three-Point Estimate Instructions
 
