@@ -2,7 +2,7 @@
 
 * 2. xref:10_customer_conversation.adoc[Sample answers for Customer Conversation]
 
-* 3. xref:12_customer_conv_three_point.adoc[12_Three-Point Estimate Instructions]
+* 3. xref:12_customer_conv_three_point.adoc[Three-Point Estimate Instructions]
 
 * 4. xref:20_ai-accelerator_review.adoc[AI-Accelerator Project]
 
